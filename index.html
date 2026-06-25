@@ -67,6 +67,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"> -->
 
 <!-- Code Syntax Highlighting 
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/jwarby/jekyll-pygments-themes/master/github.css" />
@@ -85,7 +92,24 @@
 
 <style>
   body {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
+  }
+  
+  a {
+    color: #6d28d9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #4c1d95;
+    text-decoration: underline;
+  }
+  
+  .publications {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.5;
+    color: var(--global-text-color);
   }
   
   /* Ensure bold formatting works properly */
@@ -100,6 +124,31 @@
   /* Ensure section headings are centered */
   .publications h3 {
     text-align: center !important;
+  }
+
+  .publications h4 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .publication-card {
+    border: 1px solid #d8dee4;
+    border-left: 4px solid #87CEEB;
+    border-radius: 16px;
+    padding: 18px 16px;
+    margin: 18px 0;
+    background-color: var(--global-bg-color);
+  }
+
+  html[data-theme='dark'] .publication-card {
+    border-color: #5f6b75;
+    border-left-color: #87CEEB;
+  }
+
+  html[data-theme='dark'] .publications h3 {
+    color: var(--global-text-color) !important;
   }
 </style>
 
@@ -330,31 +379,44 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     </div>
 
     
-        <hr style="border: none; border-top: 0.5px solid #000; margin: 0px 0;">
-      <div class="publications" style="margin-top: -80px;">
+        <hr style="border: none; border-top: 0.5px solid var(--global-text-color); margin: 0px 0; width: min(980px, 96vw); margin-left: 50%; transform: translateX(-50%);">
+      <div class="publications" style="margin-top: -80px; width: min(980px, 96vw); margin-left: 50%; transform: translateX(-50%);">
   <h1 class="display-1 text-left" style="color: #87CEEB; font-family: 'Roboto Slab', serif; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Publications</h1>
-  <p style="font-size: 0.9em; color: #666; font-style: italic; margin-bottom: 10px; margin-top: -20px; align-self: flex-end;">†: Corresponding Author; *: Equal Contribution</p>
+  <p style="font-size: 0.9em; color: var(--global-text-color-light); font-style: italic; margin-bottom: 10px; margin-top: -20px; align-self: flex-end;">†: Corresponding Author; *: Equal Contribution</p>
 
 
-  <h3 class="text-center" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #000; text-align: center !important;">Learning + Optimization</h3>
-  <hr>
-  <div class="row">
+  <h3 class="text-center" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: var(--global-text-color); text-align: center !important;">Learning + Optimization</h3>
+  
+  <div class="row publication-card">
     <div class="col-md-5">
       <img src="/assets/img/pub/HomPGD.png" class="img-fluid rounded" alt="Publication figure">
     </div>
     <div class="col-md-7">
-      <h4><a href="https://neurips.cc/virtual/2025/poster/117184" target="_blank">Fast Projection-Free Approach (without Optimization Oracle) for Optimization over Compact Convex Set</a></h4>
+      <h4><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/654a49a2e6e71dfc7a8bbb06e0ed462c-Abstract-Conference.html" target="_blank">Fast Projection-Free Approach (without Optimization Oracle) for Optimization over Compact Convex Set</a></h4>
       <p class="mb-1"><strong><u>Chenghao Liu</u></strong>, <a href="https://emliang.github.io/" target="_blank">Enming Liang</a><sup>†</sup>, <a href="https://www.mhchen.com/" target="_blank">Minghua Chen</a><sup>†</sup> </p>
       <p class="mb-1"><strong>NeurIPS2025 </strong> <strong><span style="color: red;">Spotlight</span></strong>, San Diego, USA</p>
       <p class="mb-0"><strong>Key Words:</strong> projection-free, reparametrization, convex optimization</p>
+    </div>
   </div>
- </div>
 
- <hr style="border: none; border-top: 0.5px solid #000;">
+  
+  <div class="row publication-card">
+    <div class="col-md-5">
+      <img src="/assets/img/pub/HomNC.png" class="img-fluid rounded" alt="Publication figure">
+    </div>
+    <div class="col-md-7">
+      <h4><a href="https://icml.cc/virtual/2026/poster/62871" target="_blank">Hom-PGD+: Fast Reparameterized Optimization over Non-convex Ball-Homeomorphic Set</a></h4>
+      <p class="mb-1"><strong><u>Chenghao Liu</u></strong>, <a href="https://emliang.github.io/" target="_blank">Enming Liang</a><sup>†</sup>, <a href="https://www.mhchen.com/" target="_blank">Minghua Chen</a> </p>
+      <p class="mb-1"><strong>ICML2026</strong>, Seoul, South Korea</p>
+      <p class="mb-0"><strong>Key Words:</strong>  reparametrization, non-convex constrained set, invertible neural network</p>
+    </div>
+  </div>
 
-  <h3 class="text-center" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: #000; text-align: center !important;">Learning Theory</h3>
-  <hr>
-  <div class="row">
+ <hr style="border: none; border-top: 0.5px solid var(--global-text-color);">
+
+  <h3 class="text-center" style="font-family: 'Open Sans', sans-serif; font-weight: 600; color: var(--global-text-color); text-align: center !important;">Learning Theory</h3>
+  
+  <div class="row publication-card">
     <div class="col-md-5">
       <img src="/assets/img/pub/RN.png" class="img-fluid rounded" alt="Publication figure">
     </div>
@@ -366,9 +428,9 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
       </div>
       </div>
   
-  <hr>
   
-  <div class="row">
+  
+  <div class="row publication-card">
     <div class="col-md-5">
       <img src="/assets/img/pub/NarrowNN.png" class="img-fluid rounded" alt="Publication figure">
     </div>
